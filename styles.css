@@ -1,0 +1,46 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+
+.ageContainer{
+  background-color: lightblue;
+  width: 500px;
+  height: 500px;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  box-shadow: 5px 5px palevioletred;
+}
+
+.ageSelection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: xx-large;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 0);
+  text-shadow: 2px 2px darkgoldenrod;
+}
+
+button{
+  display: flex;
+  margin-top: 5px;
+  height: 50px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: bisque;
+  border-width: 0px;
+  box-shadow: 3px 3px lightslategray;
+}
+
+button:hover{
+  background-color: rgb(246, 212, 169);
+}
