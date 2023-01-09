@@ -23,14 +23,14 @@ body{
   flex-direction: column;
   font-size: xx-large;
   font-weight: bold;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Tahoma;
   color: rgb(255, 255, 0);
   text-shadow: 2px 2px darkgoldenrod;
 }
 
 button{
   display: flex;
-  margin-top: 5px;
+  margin-top: 20px;
   height: 50px;
   width: 300px;
   justify-content: center;
