@@ -10,16 +10,40 @@
 <body>
   <div class="ageContainer">
     <div class="questionContainer">
-      <p class="questionText">5. Hangisi <a style="color:orange">Turuncudur</a> ?</p>
+      <p class="questionText">5. Hangisi Mavidir ?</p>
       <div class="answerContainer">
-        <div style="background-color: orange" id="correct" class="answerA"></div>
-        <div style="background-color: green" class="answerB"></div>
+        <div style="background-color: green" class="answer" id="lastwrong" onclick="window.location.href = '../Tests.html'"></div>
+        <div style="background-color: orange" class="answer" id="lastwrong" onclick="window.location.href = '../Tests.html'"></div>
+        <div style="background-color: blue" id="lastcorrect" class="answer" onclick="window.location.href = '../Tests.html'"></div>
       </div>
-      <p class="score">Skor:<a class="score" id="total">0</a></p>
+      <p class="score">Doğru:<a class="score" id="total">0</a></p>
     </div>
   </div>
 </div>
 </body>
-<script src="../../../../index.js">
+<script>
+  document.getElementById("lastcorrect").addEventListener("click", lastAnswer);
+  document.getElementById("lastwrong").addEventListener("click", lastWrong);
+  if (localStorage.getItem("score")) {
+        document.getElementById("total").innerHTML =
+            localStorage.getItem("score");
+    } else {
+        document.getElementById("total").innerHTML = 0;
+    }
+  
+  function lastAnswer(){
+    let score = parseInt(localStorage.getItem("score"));
+    localStorage.setItem("score", ++score);
+    document.getElementById("total").innerHTML = localStorage.getItem("score");
+    alert("Tebrikler Doğru Sayınız: " + localStorage.getItem("score"))
+    localStorage.setItem("score", "0");
+    
+  }
+
+  function lastWrong(){
+    document.getElementById("total").innerHTML = localStorage.getItem("score");
+    alert("Tebrikler Doğru Sayınız: " + localStorage.getItem("score"))
+    localStorage.setItem("score", "0");
+  }
 </script>
 </html>
