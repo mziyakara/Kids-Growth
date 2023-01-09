@@ -7,9 +7,9 @@ body{
 
 .ageContainer{
   background-color: lightblue;
-  width: 500px;
-  height: 500px;
-  margin-top: 10%;
+  width: 700px;
+  height: 700px;
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   border-radius: 50px;
@@ -39,8 +39,63 @@ button{
   background-color: bisque;
   border-width: 0px;
   box-shadow: 3px 3px lightslategray;
+  cursor: pointer;
 }
 
 button:hover{
   background-color: rgb(246, 212, 169);
+}
+
+.answerContainer{
+  background-color: rgb(140, 204, 225);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border-radius: 50px;
+  box-shadow: 5px 5px palevioletred;
+  align-items: center;
+}
+
+.questionText{
+  font-size: xx-large;
+  color:white;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.answerA{
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 5px 5px rgb(61, 61, 61);
+}
+.answerB{
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  transition: 0.2s;
+  cursor: pointer;
+  box-shadow: 5px 5px rgb(61, 61, 61);
+}
+
+.answerB:hover, .answerA:hover{
+  width: 145px;
+  height: 145px;
+  box-shadow: 7px 7px rgb(61, 61, 61);
+}
+
+.score{
+  font-size: xx-large;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
