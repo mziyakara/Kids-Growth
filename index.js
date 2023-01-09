@@ -1,8 +1,15 @@
 (function increaseScore() {
     document.getElementById("correct").addEventListener("click", increase);
-    document.getElementById("total").innerHTML = localStorage.getItem("score");
+
+    if (localStorage.getItem("score")) {
+        document.getElementById("total").innerHTML =
+            localStorage.getItem("score");
+    } else {
+        document.getElementById("total").innerHTML = 0;
+    }
+
     function increase() {
-        if (parseInt(localStorage.getItem("score")) >= 0) {
+        if (localStorage.getItem("score") >= 0) {
             let score = parseInt(localStorage.getItem("score"));
             localStorage.setItem("score", ++score);
         } else {
