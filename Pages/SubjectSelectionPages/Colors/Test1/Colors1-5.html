@@ -10,14 +10,20 @@
 <body>
   <div class="ageContainer">
     <div class="questionContainer">
-      <p class="questionText">5. Hangisi <a style="color:orange">Turuncudur</a> ?</p>
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <p class="questionText">5. Hangisi </p> <div style="background-color: orange;" class="questionDiv"></div> <p class="questionText"> bunun ile aynıdır ?</p>
+      </div>
       <div class="answerContainer">
-        <div style="background-color: green" class="answer" id="lastwrong" onclick="window.location.href = '../Tests.html'"></div>
-        <div style="background-color: orange" id="lastcorrect" class="answer" onclick="window.location.href = '../Tests.html'"></div>
+        <div style="background-color: green" id="lastwrong" class="answer"></div>
+        <div style="background-color: orange" id="lastcorrect" class="answer"></div>
       </div>
       <p class="score">Doğru:<a class="score" id="total">0</a></p>
     </div>
   </div>
+</div>
+<div onclick="window.location.href = '../Tests.html'" class="scoreShow">
+  <p style="color: white; font-size: xx-large; text-align: center;">Tebrikler Toplam Dogru Sayınız</p>
+  <p style="color: white; font-size: xxx-large; text-align: center; margin-top: -5%;" id="scoreShowNumber">0</p>
 </div>
 </body>
 <script>
@@ -34,14 +40,16 @@
     let score = parseInt(localStorage.getItem("score"));
     localStorage.setItem("score", ++score);
     document.getElementById("total").innerHTML = localStorage.getItem("score");
-    alert("Tebrikler Doğru Sayınız: " + localStorage.getItem("score"))
+    document.querySelector(".scoreShow").style.visibility = "visible"; 
+    document.getElementById("scoreShowNumber").innerHTML = localStorage.getItem("score");
     localStorage.setItem("score", "0");
     
   }
 
   function lastWrong(){
     document.getElementById("total").innerHTML = localStorage.getItem("score");
-    alert("Tebrikler Doğru Sayınız: " + localStorage.getItem("score"))
+    document.querySelector(".scoreShow").style.visibility = "visible";
+    document.getElementById("scoreShowNumber").innerHTML = localStorage.getItem("score");
     localStorage.setItem("score", "0");
   }
 </script>

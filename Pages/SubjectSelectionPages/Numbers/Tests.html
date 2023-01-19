@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 - 3 Yaş Testler</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+  <div class="ageContainer">
+    <div class="ageSelection">
+      2 - 3 Yaş Sayı Testleri
+    <button id="start" onclick="window.location.href = '../Numbers/Test1/Numbers1-1.html'">Test1</button>
+    <button id="start" onclick="window.location.href = '../Numbers/Test2/Numbers2-1.html'">Test2</button>
+    <button id="start" onclick="window.location.href = '../Numbers/Test3/Numbers3-1.html'">Test3</button>
+    <button onclick="window.location.href = '../../../../index.html'">Anasayfaya Dön</button>
+  </div>
+</div>
+</body>
+<script>
+  document.querySelectorAll('[id=start]').forEach(btn => {
+    btn.addEventListener('click', event => {
+    start()
+  })
+})
+  function start(){
+    localStorage.setItem("score", "0");
+  }
+</script>
+</html>
