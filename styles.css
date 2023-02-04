@@ -58,6 +58,14 @@ button:hover{
   align-items: center;
 }
 
+.fourAnswerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+}
+
 .questionText{
   font-size: xx-large;
   color:white;
